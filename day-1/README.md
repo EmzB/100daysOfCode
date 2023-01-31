@@ -1,4 +1,5 @@
-day1
+Day 1
+
 This Day marks the beginning of my 100days of code journey
 
 What did I tackle ?
