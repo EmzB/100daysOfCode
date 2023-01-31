@@ -20,8 +20,33 @@ body{
     background-color: aliceblue;
     border-radius: 50%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+.clock .hand{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: black;
+    position: relative;
+    display: none;
+}
+.clock .sec-hand{
+width: 3px;
+height: 20px;
 
 }
+.clock .min-hand{
+    width: 3px;
+    height: 20px;
+}
+.clock .hr-hand{   
+    width: 3px;
+    height: 20px;
+}
+
+
 .clock .val{
     --rotationValue: 0;
     position: absolute;
@@ -65,4 +90,12 @@ body{
 }
 .clock .val-12{
     --rotationValue: 360deg;
+}
+.clock::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 50%;
 }
