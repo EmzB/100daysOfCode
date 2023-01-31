@@ -29,21 +29,26 @@ body{
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     background-color: black;
-    position: relative;
-    display: none;
+    position: absolute;
+    bottom: 50%;
+    height: 50%;
+
 }
 .clock .sec-hand{
-width: 3px;
-height: 20px;
+background-color:coral;
+height: 40%;
+width: 4px;
+
 
 }
 .clock .min-hand{
-    width: 3px;
-    height: 20px;
+    width: 5px;
+    transform: rotate(30deg);
+
 }
 .clock .hr-hand{   
-    width: 3px;
-    height: 20px;
+    width: 6px;
+    transform: rotate(60deg);
 }
 
 
