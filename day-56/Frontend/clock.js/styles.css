@@ -1,0 +1,68 @@
+* ,*::before, *::after{
+ margin: 0;
+ padding: 0;
+}
+
+body{
+    background-color: lightgreen;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: relative;
+
+}
+.clock .val{
+    --rotationValue: 0;
+    position: absolute;
+    transform: rotate(var(--rotationValue));
+    width: 100%;
+    height: 100%;
+
+}
+.clock .val-1
+{--rotationValue: 30deg;
+}
+.clock .val-2{
+    --rotationValue: 60deg;
+}
+.clock .val-3{
+    --rotationValue: 90deg;
+}
+.clock .val-4{
+    --rotationValue:120deg;
+}
+.clock .val-5{
+    --rotationValue: 150deg;
+}
+.clock .val-6{
+    --rotationValue: 180deg;
+}
+.clock .val-7{
+    --rotationValue: 210deg;;
+}
+.clock .val-8{
+    --rotationValue: 240deg;
+}
+.clock .val-9{
+    --rotationValue: 270deg;
+}
+.clock .val-10{
+    --rotationValue: 300deg;
+}
+.clock .val-11{
+    --rotationValue: 330deg;
+}
+.clock .val-12{
+    --rotationValue: 360deg;
+}
