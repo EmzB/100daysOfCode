@@ -27,6 +27,7 @@ body{
 
     }
 .clock .hand{
+    --rotationValue: 0;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     background-color: black;
@@ -36,6 +37,7 @@ body{
     z-index: 3;
     opacity: 0.3;
     transform-origin: bottom;
+    transform: rotate(calc(var(--rotationValue) * 1deg));
 
 }
 .clock .sec-hand{
