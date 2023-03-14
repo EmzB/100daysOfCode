@@ -25,6 +25,7 @@ console.log("i've been clicked adding state...");
 displayValue= document.createElement('div');
 displayValue.classList.add(currentValue)// here's where the magic happens 
 e.target.append(displayValue)
+currentValue = (currentValue =="X")? "O" :"X";//check first is it X ? if so toggle O else vice versa
 e.target.removeEventListener('click', addState)
 
 }
