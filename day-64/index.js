@@ -1,7 +1,8 @@
 const squaresContainer= document.querySelector('.squares-container');
 const scores= document.querySelector('.score');
 const squares = ["", "", "", "", "","","","",""];
-let currentValue= "X";
+let currentValue= "X"; // this will represent the X and O div to be toggled.
+// we'll make this value the name of their respective classes
 
 console.log(scores.className, squaresContainer.className);
 
@@ -21,8 +22,10 @@ squaresContainer.append(singleSquare);
 
 function addState(e){
 console.log("i've been clicked adding state...");
-e.target.textContent= currentValue;
-
+displayValue= document.createElement('div');
+displayValue.classList.add(currentValue)// here's where the magic happens 
+e.target.append(displayValue)
+e.target.removeEventListener('click', addState)
 
 }
 
