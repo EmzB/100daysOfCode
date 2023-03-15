@@ -27,10 +27,15 @@ displayValue.classList.add(currentValue)// here's where the magic happens
 e.target.append(displayValue)
 currentValue = (currentValue =="X")? "O" :"X";//check first is it X ? if so toggle O else vice versa
 e.target.removeEventListener('click', addState)
-
+checkWin()
 }
 
-function checkWin(){ // remember that our divs are generated from an array so to check for win,
+formBoard()
+
+
+function checkWin(){ 
+ const squaresNodeList = document.querySelectorAll('.single-square');
+// remember that our divs are generated from an array so to check for win,
 // the condition must satisfy cells that form a winning combo
 const winningCombos= [
           [0, 1, 2],
@@ -43,7 +48,28 @@ const winningCombos= [
           [2, 4, 6],
 
 ];
+//now we need to loop through all our squares and check whether one specific class exists inside the 8 possible positions
+for (let i= 0; i<=winningCombos.length-1; i++) {
+    const singleCombo= winningCombos[i];
+    if(singleCombo.every( (val)=>
+   squaresNodeList[val].children[0]?.className=== 'X'))
+   {
+    console.log ("Xwins");
+    scores.textContent+= "X WINS !!!"
+    }
+    else if (singleCombo.every( (val)=>
+    squaresNodeList[val].children[0]?.className=== 'O'))
+    {
+     scores.textContent+= "O WINS !!!"
+     console.log ("Owins");
+     }
+}}
+  
 
-}
 
-formBoard()
+
+
+
+
+//console.log(squaresNodeList[0].children[0].className) // this will return x or 0 
+
