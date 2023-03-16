@@ -2,7 +2,7 @@ body{
     margin:0; 
     padding: 0;
     box-sizing: border-box;
-    background-color: blanchedalmond;
+    background-color: rgb(201, 178, 158);
     width:100%;
     height: 100%;
     text-align: center;
@@ -11,8 +11,10 @@ body{
 }
 
 h1{
-    letter-spacing: 2px;
-    color:brown;
+    margin-top: 1%;
+    color:rgb(39, 34, 3);
+    margin-left: -52px;
+    font-weight: 800;
     
 }
 .game{
@@ -34,7 +36,7 @@ h1{
 
 .single-square{ 
     border: 2px solid black;
-    background-color: rgb(238, 211, 185);
+    background-color: rgb(198, 168, 139);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,6 +49,32 @@ h1{
     background-repeat: no-repeat;
     background-size: contain;
 }
-.o{
+.O{
+    width: 50%;
+    height: 50%;
+    background-image: url("/assets/o-image.png");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: contain;
 
+}
+
+.single-square:hover{
+    background-color: rgb(175, 167, 154);
+}
+
+.reset-btn{
+    height: 1.5rem;
+    width: 8rem;
+    padding: 3px;
+    font-weight: 600;
+    background-color: rgb(241, 174, 152);
+    position: relative;
+    left: 25%;
+    border-radius: 12%;
+    box-shadow: 2px 2px 8px rgb(127, 65, 21);
+}
+.score{
+    font-weight: 600;
+    letter-spacing: 2px;
 }
