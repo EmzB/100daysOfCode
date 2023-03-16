@@ -4,33 +4,28 @@ const squares = ["", "", "", "", "","","","",""];
 let currentValue= "X"; // this will represent the X and O div to be toggled.
 // we'll make this value the name of their respective classes
 
-console.log(scores.className, squaresContainer.className);
-
 function formBoard(){
 squares.forEach((square, i)=>{
-
 const singleSquare= document.createElement('div');
 console.log(singleSquare);
 singleSquare.id= i;
 singleSquare.classList.add('single-square');
-singleSquare.addEventListener('click', addState)
+singleSquare.addEventListener('click', addState);
 console.log(singleSquare.className);
 squaresContainer.append(singleSquare);
-
 })
 }
+
 
 function addState(e){
 console.log("i've been clicked adding state...");
 displayValue= document.createElement('div');
-displayValue.classList.add(currentValue)// here's where the magic happens 
+displayValue.classList.add(currentValue, )// here's where the magic happens 
 e.target.append(displayValue)
 e.target.removeEventListener('click', addState)
 checkWin()
 currentValue = (currentValue =="X")? "O" :"X";//check first is it X ? if so toggle O else vice versa
 }
-
-formBoard()
 
 function checkWin(){ 
  const squaresNodeList = document.querySelectorAll('.single-square');
@@ -65,15 +60,18 @@ let gameOver = false;
     squaresNodeList.forEach(square => {
       square.removeEventListener('click', addState);
     });
+
+    setTimeout(resetGame, 2000);
+    
   }
+
+}
+function resetGame(){
+    location.reload()
 }
 
-  
 
-
-
-
-
+formBoard()
 
 //console.log(squaresNodeList[0].children[0].className) // this will return x or 0 
 
